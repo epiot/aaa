@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<script type="text/javascript" language="JavaScript">
+function HideContent(d)
+{
+  if (d.length < 1)
+    return;
+
+  document.getElementById(d).style.display = "none";
+}
+
+function ShowContent(d)
+{
+  if (d.length < 1)
+    return;
+  document.getElementById(d).style.display = "block";
+}
+
+function ReverseContent(d)
+{
+  if (d.length < 1)
+    return;
+
+  if (document.getElementById(d).style.display == "none")
+  {
+    document.getElementById(d).style.display = "block";
+  }
+  else
+  {
+    document.getElementById(d).style.display = "none";
+  }
+}
+</script>
+
+<p>
+<a href="#" onclick="JavaScript:HideContent('textBlock');">ukryj</a>
+<a href="#" onclick="JavaScript:ShowContent('textBlock');">pokaz</a>
+<a href="#" onclick="JavaScript:ReverseContent('textBlock');">odwroc</a>
+</p>
+
+<div id="textBlock" style="display:none;">
+text block text block text block text block  text block
+text block text block text block text block  text block
+</div>
+
+</body>
+</html>
